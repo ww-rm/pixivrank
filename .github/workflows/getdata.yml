@@ -43,4 +43,3 @@ jobs:
           bash "safe_commit.sh" "autorun-getdata"
           git pull --ff
           git push
- 
