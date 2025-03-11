@@ -734,7 +734,7 @@ if __name__ == "__main__":
         data = get_top10_details(t)
         path = Path(data["date"][0:4], data["date"][4:6], data["date"][6:8], f"{t}.json")
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+        path.write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
         datelist.add(data["date"])
 
